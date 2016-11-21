@@ -18,16 +18,34 @@
 
   <body>
     
-  <nav>
+  <nav class="nav-extended">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Test Riasec</a>
-      <ul id="nav-mobile" class="right">
-        <li><a class="waves-effect waves-light btn" href="sass.html">Faire le test</a></li>
-        <li><a class="waves-effect waves-light btn" href="badges.html">Reprendre le test</a></li>
-        <li><a class="waves-effect waves-light btn" href="badges.html">Administrateur</a></li>
+      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1">Test 1</a></li>
+        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+        <li class="tab"><a href="#test4">Test 4</a></li>
       </ul>
     </div>
   </nav>
+  <div id="test1" class="col s12">Test 1</div>
+  <div id="test2" class="col s12">Test 2</div>
+  <div id="test3" class="col s12">Test 3</div>
+  <div id="test4" class="col s12">Test 4</div>
+        
     <br>
     <a href="https://www.onama.fr" class="waves-effect waves-light btn">button</a>
     <a class="waves-effect waves-light btn"> <i class="material-icons left">cloud</i>button</a>
