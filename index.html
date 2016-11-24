@@ -1,49 +1,106 @@
 <!doctype html>
-
-<html lang="en">
-  <head>
-    <title></title>
-    <meta name="Content-Type" content="UTF-8">
-    <meta name="Content-Language" content="fr">
-    <meta name="Description" content="Acueil du test Riasec">
-    <meta name="Keywords" content="">
-    <meta name="Subject" content="">
-    <meta name="Copyright" content="">
-    <meta name="Author" content="James TERRIEN">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="materialize.css" />
-
-  </head>
-
-  <body>
-    
-  <nav class="nav-extended">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-        <li class="tab"><a href="#test4">Test 4</a></li>
-      </ul>
-    </div>
-  </nav>
-        
-    <br>
-    <a href="https://www.onama.fr" class="waves-effect waves-light btn">button</a>
-    <a class="waves-effect waves-light btn"> <i class="material-icons left">cloud</i>button</a>
-    <a class="waves-effect waves-light btn">  <i class="material-icons right">cloud</i>button</a>
-     <a class="waves-effect waves-light btn">  <i class="material-icons right">cloud</i>button</a>
-    <p>Test</p>
-        
-    
-   
-  </body>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta name="Content-Type" content="UTF-8">
+		<meta name="Content-Language" content="fr">
+		<meta name="Description" content="Acueil du test Riasec">
+		<meta name="Keywords" content="">
+		<meta name="Subject" content="">
+		<meta name="Copyright" content="">
+		<meta name="Author" content="Groupe K Piscine">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link rel="stylesheet" href="materialize/css/materialize.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="" class="brand-logo right">Test Riasec</a>
+				<a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+					<li><a class="waves-effect waves-light btn" href="test.html">Faire le test</a></li>
+					<li><a class="waves-effect waves-light btn" href="">Reprendre le test</a></li>
+					<li><a class="waves-effect waves-light btn" href="">Administrateur</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a class="waves-effect waves-light btn" href="test.html">Faire le test</a></li>
+					<li><a class="waves-effect waves-light btn" href="">Reprendre le test</a></li>
+					<li><a class="waves-effect waves-light btn" href="">Administrateur</a></li>
+				</ul>
+			</div>
+		</nav>
+		<br>
+		<div>
+			<h5 class="center-align">Bienvenue sur le test Riasec</h5>
+		</div>
+		<br>
+		<div class="row rowSpe">
+			<a href="test.html" class="col s4 center-align button2" ><i class="amazing material-icons">assignment</i><h5>Faire le test</h5></a>
+			<a href="test.html" class="col s4 center-align button2"><i class="amazing material-icons">replay</i><h5>Reprendre le test</h5></a>
+			<a href="index.html" class="col s4 center-align button2"><i class="amazing material-icons">perm_identity</i><h5>Admins</h5></a>
+		</div>
+		<br>
+		
+		<br>
+		<div class="container">
+			<div class="row z-depth-4 blue-grey lighten-5">
+				<form class="col s12">
+					
+					<div class="row">
+						<div class="input-field col s9">
+							<input id="email" type="email" class="validate">
+							<label for="email" data-error="wrong" data-success="right">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9">
+							<input id="password" type="password" class="validate">
+							<label for="password" data-error="wrong" data-success="right">Mot de passe</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9">
+							<button class="btn waves-effect waves-light" type="submit" name="action">Connexion
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer class="page-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="white-text">Footer Content</h5>
+						<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+					</div>
+					<div class="col l4 offset-l2 s12">
+						<h5 class="white-text">Links</h5>
+						<ul>
+							<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+							<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="footer-copyright">
+				<div class="container">
+				© 2014 Copyright Text
+					<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+				</div>
+			</div>
+        </footer>
+	</body>
 </html>
+<script src="jQuery.js"></script>
+<script src="materialize/js/materialize.js"></script>
+<script>
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+})
+</script>
