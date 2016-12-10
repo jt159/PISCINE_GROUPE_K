@@ -1,0 +1,100 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: User
+#------------------------------------------------------------
+
+CREATE TABLE User(
+        User_Id          int (11) Auto_increment  NOT NULL ,
+        User_Name        Varchar (25) NOT NULL ,
+        User_First_Name  Varchar (25) NOT NULL ,
+        User_Mail        Varchar (50) NOT NULL ,
+        User_Password    Varchar (50) NOT NULL ,
+        User_Cookie_Code Varchar (25) ,
+        Role_Id          Int NOT NULL ,
+        Class_Id         Int NOT NULL ,
+        PRIMARY KEY (User_Id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Role
+#------------------------------------------------------------
+
+CREATE TABLE Role(
+        Role_Id    int (11) Auto_increment  NOT NULL ,
+        Role_Title Varchar (25) ,
+        PRIMARY KEY (Role_Id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Class
+#------------------------------------------------------------
+
+CREATE TABLE Class(
+        Class_Id                int (11) Auto_increment  NOT NULL ,
+        Class_Section           Varchar (25) NOT NULL ,
+        Class_Section_Year      Int NOT NULL ,
+        Class_School_Year       Int NOT NULL ,
+        Class_Available_Changes Bool NOT NULL ,
+        PRIMARY KEY (Class_Id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Question
+#------------------------------------------------------------
+
+CREATE TABLE Question(
+        Question_Id     int (11) Auto_increment  NOT NULL ,
+        Question_Letter Char (25) NOT NULL ,
+        Question_Title  Varchar (255) ,
+        Theme_Id        Int NOT NULL ,
+        Groupe_Id       Int NOT NULL ,
+        PRIMARY KEY (Question_Id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Theme
+#------------------------------------------------------------
+
+CREATE TABLE Theme(
+        Theme_Id    int (11) Auto_increment  NOT NULL ,
+        Theme_Title Varchar (25) NOT NULL ,
+        PRIMARY KEY (Theme_Id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Groupe
+#------------------------------------------------------------
+
+CREATE TABLE Groupe(
+        Groupe_Id     int (11) Auto_increment  NOT NULL ,
+        Groupe_Number Int NOT NULL ,
+        PRIMARY KEY (Groupe_Id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Answer
+#------------------------------------------------------------
+
+CREATE TABLE Answer(
+        Answer_Value Int NOT NULL ,
+        Question_Id  Int NOT NULL ,
+        User_Id      Int NOT NULL ,
+        PRIMARY KEY (Question_Id ,User_Id )
+)ENGINE=InnoDB;
+
+ALTER TABLE User ADD CONSTRAINT FK_User_Role_Id FOREIGN KEY (Role_Id) REFERENCES Role(Role_Id);
+ALTER TABLE User ADD CONSTRAINT FK_User_Class_Id FOREIGN KEY (Class_Id) REFERENCES Class(Class_Id);
+ALTER TABLE Question ADD CONSTRAINT FK_Question_Theme_Id FOREIGN KEY (Theme_Id) REFERENCES Theme(Theme_Id);
+ALTER TABLE Question ADD CONSTRAINT FK_Question_Groupe_Id FOREIGN KEY (Groupe_Id) REFERENCES Groupe(Groupe_Id);
+ALTER TABLE Answer ADD CONSTRAINT FK_Answer_Question_Id FOREIGN KEY (Question_Id) REFERENCES Question(Question_Id);
+ALTER TABLE Answer ADD CONSTRAINT FK_Answer_User_Id FOREIGN KEY (User_Id) REFERENCES User(User_Id);
